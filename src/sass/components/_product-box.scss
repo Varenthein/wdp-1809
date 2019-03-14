@@ -83,25 +83,19 @@
 
 @media (min-width: 320px) and (max-width: 567px) and (orientation: portrait) {
   .section--products {
-    .container {
-      .row {
-        .col-sm-12 {
-          margin: 0 auto;
-        }
-      }
+    .col-sm-12 {
+      margin: 0 auto;
     }
   }
 }
 
 @media (min-width: 568px) and (max-width: 767px) and (orientation: landscape) {
   .section--products {
-    .container {
-      .row {
-        justify-content: center;
-        .col-sm-12 {
-          max-width: 50%;
-          padding: 5px;
-        }
+    .row {
+      justify-content: center;
+      .col-sm-12 {
+        max-width: 50%;
+        padding: 5px;
       }
     }
   }
@@ -109,26 +103,20 @@
 
 @media (min-width: 768px) and (max-width: 995px) and (orientation: portrait) {
   .section--products {
-    .container {
-      .row {
-        .col-md-6 {
-          max-width: 50%;
-        }
-      }
+    .col-md-6 {
+      max-width: 50%;
     }
   }
 }
 
 @media (min-width: 996px) and (max-width: 1024px) and (orientation: landscape) {
   .section--products {
-    .container {
-      .row {
-        justify-content: center;
-        .col-md-6 {
-          max-width: 33.33%;
-          margin: 15px;
-          padding: 0;
-        }
+    .row {
+      justify-content: center;
+      .col-md-6 {
+        max-width: 33.33%;
+        margin: 15px;
+        padding: 0;
       }
     }
   }
