@@ -1,0 +1,50 @@
+.section-brands {
+  margin-bottom: 50px;
+}
+
+.brands-images {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid $text-color;
+}
+
+.brands-image {
+  filter: grayscale(100%);
+  padding: 10px;
+  border: 1px solid $text-color;
+  margin: 20px 15px;
+}
+
+.carousel-cell {
+  display: inline;
+}
+
+.brands-buttons {
+  height: 100px;
+  width: 45px;
+  padding: 0;
+
+  i {
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+.previous-button {
+  margin-left: 0;
+}
+
+.next-button {
+  margin-right: 0;
+}
+
+//do usuniecia na etapie RWD
+
+#carousel-cell1,
+#carousel-cell6 {
+  display: none;
+}
