@@ -1,0 +1,92 @@
+.feedback {
+  header {
+    width: 90%;
+    margin: 0 auto;
+
+    h1 {
+      color: $primary;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 37.72px;
+      text-transform: uppercase;
+    }
+
+    .border {
+      width: 1050px;
+      height: 3px;
+      background-color: #e2e2e2;
+      display: flex;
+
+      .orange {
+        background-color: $primary;
+        width: 44px;
+        height: 3px;
+      }
+    }
+  }
+
+  .carousel {
+    width: 90%;
+    margin: 20px auto 0 auto;
+
+    .carousel-cell {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .fa-quote-right {
+        width: 23px;
+        height: 19px;
+        color: #2a2a2a;
+        margin: 12px auto 30px auto;
+      }
+
+      p {
+        width: 90%;
+        text-align: right;
+        color: $post-info-text-color;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+      }
+
+      .client {
+        position: relative;
+        width: 250px;
+        height: 54px;
+        margin: 10px auto 40px auto;
+
+        .avatar {
+          width: 60px;
+          height: 52px;
+          border-radius: 5px;
+          border: 1px solid #aaaaaa;
+          background-color: $post-info-text-color;
+        }
+
+        .name {
+          position: absolute;
+          padding-top: 3px;
+          top: -5px;
+          right: 80px;
+          color: $post-info-text-color;
+          font-family: "Poppins - Semi Bold";
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+        }
+
+        .who-is-he {
+          position: absolute;
+          top: 20px;
+          right: 60px;
+          color: $post-info-text-color;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
