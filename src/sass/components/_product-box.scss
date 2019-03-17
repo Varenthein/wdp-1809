@@ -1,3 +1,4 @@
+
 .panel-bar {
   .row {
     .menu {
@@ -20,9 +21,9 @@
     }
 
     .product-box {
-      background-color: $product-bg;
+      background-color: #ffffff;
       border: 1px solid #e1e1e1;
-      margin-bottom: 2rem;v
+      margin-bottom: 2rem;
 
       .photo {
         position: relative;
@@ -201,46 +202,5 @@
   .flickity-page-dots {
     width: 100%;
     margin-top: 25px;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 567px) and (orientation: portrait) {
-  .section--products {
-    .col-sm-12 {
-      margin: 0 auto;
-    }
-  }
-}
-
-@media (min-width: 568px) and (max-width: 767px) and (orientation: landscape) {
-  .section--products {
-    .row {
-      justify-content: center;
-      .col-sm-12 {
-        max-width: 50%;
-        padding: 5px;
-      }
-    }
-  }
-}
-
-@media (min-width: 768px) and (max-width: 995px) and (orientation: portrait) {
-  .section--products {
-    .col-md-6 {
-      max-width: 50%;
-    }
-  }
-}
-
-@media (min-width: 996px) and (max-width: 1024px) and (orientation: landscape) {
-  .section--products {
-    .row {
-      justify-content: center;
-      .col-md-6 {
-        max-width: 33.33%;
-        margin: 15px;
-        padding: 0;
-      }
-    }
   }
 }
