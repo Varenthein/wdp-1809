@@ -6,10 +6,23 @@
 
     .cover {
       padding: 70% 25px 0 25px;
+
       background: {
         color: $post-box-cover-bg;
         size: cover;
         position: 50%;
+      }
+
+      &.chair {
+        background-image: url("../images/blog/chairs-993853_640-min.png");
+      }
+
+      &.kitchen {
+        background-image: url("../images/blog/kitchen-1940177_640-min.png");
+      }
+
+      &.second-kitchen {
+        background-image: url("../images/blog/kitchen-2486092_640-min.png");
       }
 
       .details {
@@ -76,6 +89,30 @@
             background-color: $primary;
           }
         }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+  .section--blog-posts {
+    .row {
+      justify-content: center;
+
+      .col-sm-12 {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 995px) and (orientation: portrait) {
+  .section--blog-posts {
+    .row {
+      justify-content: center;
+
+      .col-md-6 {
+        max-width: 50%;
       }
     }
   }

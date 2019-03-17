@@ -9,13 +9,12 @@
     "prebuild": "npm run clean",
     "build": "parcel build src/index.html",
     "clean": "rimraf dist",
-    "code-quality": "npm run format && npm run lint",
-    "format": "prettier --write \"src/**/*.{js,html,scss}\"",
-    "lint": "eslint src/"
+    "code-quality": "npm run format",
+    "format": "prettier --write \"src/**/*.{js,html,scss}\""
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && lint-staged"
+      "pre-commit": "pretty-quick --staged"
     }
   },
   "lint-staged": {
@@ -43,6 +42,7 @@
     "sass": "^1.15.3"
   },
   "dependencies": {
+    "flickity": "^2.2.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.6"
   }
