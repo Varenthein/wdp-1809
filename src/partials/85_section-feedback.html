@@ -1,13 +1,15 @@
-<section class="feedback">
-  <header>
-    <h1>client feedback</h1>
-    <div class="border"><div class="orange"></div></div>
-  </header>
+<section class="container">
+  <div class="panel-bar">
+    <div class="row no-gutters align-items-end overwritten">
+      <div class="col-auto heading"><h3>client feedback</h3></div>
+      <div class="col"></div>
+    </div>
+  </div>
   <div
     class="carousel"
-    data-flickity="{ &quot;freeScroll&quot;: true, &quot;contain&quot;: true, &quot;prevNextButtons&quot;: false, &quot;pageDots&quot;: true,&quot;autoPlay&quot;: 3500}"
+    data-flickity="{ &quot;freeScroll&quot;: true, &quot;contain&quot;: true, &quot;prevNextButtons&quot;: false, &quot;pageDots&quot;: true}"
   >
-    <div class="carousel-cell">
+    <div id="first-slide" class="carousel-cell">
       <i class="fas fa-quote-right"></i>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, modi placeat
@@ -16,11 +18,13 @@
       </p>
       <div class="client">
         <div class="avatar"></div>
-        <p class="name">John Smith</p>
-        <p class="who-is-he">Furniture client</p>
+        <div class="client-info">
+          <p class="name">John Smith</p>
+          <p class="who-is-he">Furniture client</p>
+        </div>
       </div>
     </div>
-    <div class="carousel-cell">
+    <div id="second-slide" class="carousel-cell">
       <i class="fas fa-quote-right"></i>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, modi placeat
@@ -29,11 +33,13 @@
       </p>
       <div class="client">
         <div class="avatar"></div>
-        <p class="name">John Smith</p>
-        <p class="who-is-he">Furniture client</p>
+        <div class="client-info">
+          <p class="name">Gregory Watson</p>
+          <p class="who-is-he">Furniture client</p>
+        </div>
       </div>
     </div>
-    <div class="carousel-cell">
+    <div id="third-slide" class="carousel-cell">
       <i class="fas fa-quote-right"></i>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, modi placeat
@@ -42,8 +48,10 @@
       </p>
       <div class="client">
         <div class="avatar"></div>
-        <p class="name">John Smith</p>
-        <p class="who-is-he">Furniture client</p>
+        <div class="client-info">
+          <p class="name">Micheal Jordan</p>
+          <p class="who-is-he">Furniture client</p>
+        </div>
       </div>
     </div>
   </div>

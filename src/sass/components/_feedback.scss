@@ -1,27 +1,9 @@
-.feedback {
-  header {
-    width: 90%;
-    margin: 0 auto;
+.container {
+  position: relative;
 
-    h1 {
-      color: $primary;
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 37.72px;
-      text-transform: uppercase;
-    }
-
-    .border {
-      width: 1050px;
-      height: 3px;
-      background-color: #e2e2e2;
-      display: flex;
-
-      .orange {
-        background-color: $primary;
-        width: 44px;
-        height: 3px;
-      }
+  .row {
+    &.overwritten {
+      max-width: 90%;
     }
   }
 
@@ -52,10 +34,11 @@
       }
 
       .client {
-        position: relative;
-        width: 250px;
-        height: 54px;
-        margin: 10px auto 40px auto;
+        margin: 10px auto 61px auto;
+        height: 80px;
+        width: 400px;
+        display: flex;
+        align-items: center;
 
         .avatar {
           width: 60px;
@@ -63,30 +46,99 @@
           border-radius: 5px;
           border: 1px solid #aaaaaa;
           background-color: $post-info-text-color;
+          justify-content: flex-start;
         }
 
-        .name {
-          position: absolute;
-          padding-top: 3px;
-          top: -5px;
-          right: 80px;
-          color: $post-info-text-color;
-          font-family: "Poppins - Semi Bold";
-          font-size: 16px;
-          font-weight: 600;
-          line-height: 24px;
-        }
+        .client-info {
+          display: flex;
+          flex-direction: column;
+          width: auto;
+          max-height: 60px;
+          max-width: 250px;
 
-        .who-is-he {
-          position: absolute;
-          top: 20px;
-          right: 60px;
-          color: $post-info-text-color;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 24px;
+          .name {
+            color: $post-info-text-color;
+            font-family: "Poppins - Semi Bold";
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            padding-top: 5px;
+            margin-left: 20px;
+            margin-bottom: 5px;
+            text-align: left;
+          }
+
+          .who-is-he {
+            width: auto;
+            color: $post-info-text-color;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            padding-left: 20px;
+          }
         }
       }
+    }
+  }
+
+  .flickity-page-dots {
+    display: inline-block;
+    position: absolute;
+    top: -44px;
+    right: -60px;
+    width: 75px;
+    height: 20px;
+
+    .dot {
+      background-color: #e2e2e2;
+      opacity: 1;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 6px;
+      padding: 5px;
+      align-items: baseline;
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+
+    .is-selected {
+      background-color: $primary;
+    }
+  }
+
+  .flickity-prev-next-button {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    .row {
+      &.overwritten {
+        max-width: 85%;
+      }
+    }
+
+    .flickity-page-dots {
+      right: -33px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    .row {
+      &.overwritten {
+        max-width: 85%;
+      }
+    }
+
+    .flickity-page-dots {
+      right: -43px;
     }
   }
 }
