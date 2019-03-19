@@ -1,3 +1,5 @@
+$search-form-txt-color: #a4a4a4;
+
 header {
   .top-bar {
     background-color: $header-topbar-bg;
@@ -120,6 +122,157 @@ header {
       @include media-breakpoint-between(md, lg) {
         height: 126px;
       }
+
+      .search-form {
+        border: 1px solid $form-border-color;
+        display: inline-flex;
+        height: 45px;
+        font-size: 14px;
+        color: $text-color;
+        margin: 20px 0;
+
+        .category {
+          border-right: 1px solid $form-border-color;
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          nav {
+            text-align: center;
+            font-size: 14px;
+            z-index: 1;
+
+            .topmenu {
+              text-align: center;
+              background: $white;
+              list-style: none;
+              position: relative;
+              display: inline-table;
+              margin: 0;
+              padding: 0;
+
+              li {
+                min-width: 212px;
+
+                a {
+                  display: block;
+                  padding: 0px 20px;
+                  text-decoration: none;
+                  text-align: center;
+                  line-height: 43px;
+                  color: $form-border-color;
+                  &:hover > i:first-child {
+                    color: white;
+                  }
+                }
+
+                &:hover > .submenu,
+                nav .topmenu li:hover > .topmenu li a {
+                  display: block;
+                  color: $form-border-color;
+                }
+
+                &:hover > a {
+                  @extend %bg-hover-animation;
+                  color: white;
+                  i:first-child {
+                    color: white;
+                  }
+                }
+              }
+
+              .submenu {
+                display: none;
+                margin: 0;
+                border: 1px solid $form-border-color;
+                list-style: none;
+                background: white;
+                border-radius: 0px;
+                padding: 0;
+                position: absolute;
+                top: 100%;
+                left: -1px;
+
+                li {
+                  float: none;
+                  width: 100%;
+                  position: relative;
+                }
+
+                .submenu {
+                  position: absolute;
+                  left: 100%;
+                  top: 0;
+                }
+              }
+
+              &:after {
+                content: "";
+                clear: both;
+                display: block;
+                color: white;
+              }
+            }
+          }
+          i:first-child {
+            color: $primary;
+            z-index: 0;
+            position: absolute;
+            left: 10px;
+            font-size: 20px;
+            top: 50%;
+            transform: translateY(-10px);
+          }
+
+          i:last-child {
+            z-index: 0;
+            position: absolute;
+            right: 10px;
+            font-size: 15px;
+            top: 50%;
+            transform: translateY(-7.5px);
+          }
+        }
+
+        .search-field {
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          input {
+            border: 0;
+            min-width: 240px;
+            padding-left: 10px;
+            font-size: 14px;
+            outline: none;
+            &::placeholder {
+              color: $search-form-txt-color;
+            }
+          }
+
+          button {
+            border: 0;
+            background-color: transparent;
+            outline: none;
+            height: 100%;
+
+            i {
+              position: relative;
+              top: 2px;
+              right: 3px;
+              cursor: pointer;
+
+              &:hover {
+                @extend %color-timing-hover-animation;
+              }
+            }
+          }
+        }
+        @include media-breakpoint-between(md, lg) {
+          position: relative;
+          margin-top: 60px;
+        }
+      }
     }
   }
 
@@ -173,69 +326,6 @@ header {
     }
   }
 
-  .search-form {
-    border: 1px solid $form-border-color;
-    display: inline-flex;
-    height: 45px;
-    color: $text-color;
-    margin: 20px 0;
-
-    .category {
-      border-right: 1px solid $form-border-color;
-      display: flex;
-      align-items: center;
-      position: relative;
-
-      i:first-child {
-        color: $primary;
-        position: absolute;
-        left: 10px;
-        z-index: 0;
-      }
-
-      i:last-child {
-        position: absolute;
-        right: 10px;
-        z-index: 0;
-      }
-
-      select {
-        -webkit-appearance: none;
-        border: 0;
-        background-color: transparent;
-        outline: none;
-        padding: 5px 30px 5px 35px;
-        font-size: 14px;
-        position: relative;
-        z-index: 1;
-      }
-    }
-
-    .search-field {
-      display: flex;
-      align-items: center;
-      position: relative;
-
-      input {
-        border: 0;
-        padding-left: 10px;
-        font-size: 14px;
-        outline: none;
-        &::placeholder {
-          color: $text-color;
-        }
-      }
-      button {
-        border: 0;
-        background-color: transparent;
-        outline: none;
-      }
-    }
-    @include media-breakpoint-between(md, lg) {
-      position: relative;
-      margin-top: 60px;
-    }
-  }
   .menu-button {
     color: $primary;
     padding: 10px;
@@ -501,73 +591,6 @@ header {
         right: 0;
         padding-right: 0;
         width: 50%;
-      }
-      nav {
-        text-align: center;
-        font-size: 1rem;
-        z-index: 1;
-        .topmenu {
-          text-align: center;
-          background: $white;
-          list-style: none;
-          position: relative;
-          display: inline-table;
-          margin: 0;
-          padding: 0;
-          li {
-            min-width: 240px;
-            a {
-              display: block;
-              padding: 0px 20px;
-              text-decoration: none;
-              line-height: 43px;
-              color: $form-border-color;
-              &:hover > i:first-child {
-                color: white;
-              }
-            }
-            &:hover > .submenu,
-            nav .topmenu li:hover > .topmenu li a {
-              display: block;
-              color: $form-border-color;
-            }
-            &:hover > a {
-              background: $primary;
-              color: white;
-              i:first-child {
-                color: white;
-              }
-            }
-          }
-          .submenu {
-            display: none;
-            margin: 0;
-            border: 1px solid $form-border-color;
-            list-style: none;
-            background: white;
-            border-radius: 0px;
-            padding: 0;
-            position: absolute;
-            top: 100%;
-            left: -1px;
-            li {
-              float: none;
-              min-width: 240px;
-              position: relative;
-            }
-            .submenu {
-              position: absolute;
-              left: 100%;
-              top: 0;
-            }
-          }
-          &:after {
-            content: "";
-            clear: both;
-            display: block;
-            color: white;
-          }
-        }
       }
     }
   }
