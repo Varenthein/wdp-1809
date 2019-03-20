@@ -1,3 +1,5 @@
+$flkty-bg-color: #fff;
+
 .panel-bar {
   .row {
     .menu {
@@ -171,7 +173,7 @@
     z-index: 3;
     right: 0;
     top: -40px;
-    background: white;
+    background: $flkty-bg-color;
     width: auto;
     height: 20px;
     padding: 0 10px;
