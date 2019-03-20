@@ -16,12 +16,30 @@ for (let i = 0; i < galleryPanelSliders.length; i++) {
   galleryFlickities.push(flkty);
 }
 
+function menuSliderShowOffDelay() {
+  galleryPanelSliders.forEach(function(slider) {
+    slider.style.transition = 'opacity 1s ease';
+    slider.style.opacity = 1;
+  });
+}
+
+function menuSliderHide() {
+  galleryPanelSliders.forEach(function(slider) {
+    slider.style.opacity = 0;
+  });
+}
 const tabPanelShowOn = function() {
+  menuSliderHide();
+
   setInterval(function() {
     galleryFlickities.forEach(function(flkty) {
       flkty.resize();
     });
   }, 0);
+
+  setTimeout(function() {
+    menuSliderShowOffDelay();
+  }, 400);
 };
 
 tabPanelCategoryButtons.forEach(function(tabCategoryButton) {
