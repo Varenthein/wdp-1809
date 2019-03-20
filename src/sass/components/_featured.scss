@@ -1,135 +1,226 @@
+$counter-bg-color: #3e3e3e;
+$carousel-hot-deal-border-color: #f4f5f7;
+
 .section-featured {
-  margin-top: 50px;
-  height: 450px;
-
-  .cart-btn {
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-    display: none;
-    padding: 10px 20px;
-  }
-
-  .product-box:hover {
-    .cart-btn {
-      display: inherit;
-    }
-
-    .counters {
-      visibility: visible;
-    }
-
-    .counter {
-      visibility: visible;
-    }
-  }
-
-  p {
-    color: $bright-font;
-    display: inline;
-    font-size: 2.5em;
-    font-family: "Poppins", sans-serif;
-  }
-
-  .caption {
-    font-size: 1.2em;
-  }
+  height: 478px;
 
   .left-side {
     @include media-breakpoint-down(md) {
       display: none;
     }
 
-    .hot-deals-images {
-      padding: 10px;
-      height: 280px;
-      width: 280px;
-    }
+    .product-box {
+      .cart-btn {
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        font-weight: 400;
+        transform: translate(-50%, -50%);
+        display: none;
+        padding: 8px 10px;
+        font-size: 13px;
 
-    .counters-wrapper {
-      position: absolute;
-      height: 1px;
-      left: 40px;
-      top: 250px;
-    }
-
-    .counter {
-      visibility: hidden;
-      display: inline-block;
-      font-size: 8px;
-      position: relative;
-      left: 20%;
-      transform: translate(-50%, -10%);
-      line-height: 1;
-      border-radius: 50%;
-      background-color: #2a2a2a;
-      color: $bright-font;
-      padding: 20px;
-      text-align: center;
-
-      .counters {
-        height: 1px;
-        visibility: hidden;
-        display: flex;
-        justify-content: space-around;
-      }
-
-      .counter-number {
-        font-size: 18px;
-      }
-    }
-
-    .featured-header {
-      background-color: $footer-claim-bg;
-      color: $bright-font;
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 25px;
-      font-size: 1.2em;
-      text-transform: uppercase;
-    }
-
-    .flickity-page-dots {
-      display: inline;
-      position: absolute;
-      top: -35px;
-      left: 100px;
-
-      .dot {
-        background-color: $bright-font;
-        opacity: 1;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        display: inline-block;
-        margin: 6px;
-        padding: 5px;
-        align-items: baseline;
-
-        &:hover {
-          background-color: $primary;
+        i {
+          margin-right: 10px;
+          font-size: 15px;
         }
       }
 
-      .is-selected {
-        background-color: $primary;
+      .counters-wrapper {
+        position: absolute;
+        height: 1px;
+        width: 348px;
+        padding: 0 25px;
+        display: flex;
+        justify-content: space-around;
+        top: 250px;
+        text-align: center;
       }
-    }
 
-    .flickity-prev-next-button {
-      display: none;
+      .counter {
+        height: 70px;
+        width: 70px;
+        text-align: center;
+        visibility: hidden;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1;
+        border-radius: 50%;
+        background-color: $counter-bg-color;
+        color: $bright-font;
+        padding: 20px;
+
+        .counter-number {
+          font-size: 24px;
+          margin-bottom: 3px;
+          font-weight: 500;
+        }
+      }
+
+      .featured-header {
+        background-color: $footer-claim-bg;
+        color: $bright-font;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 25px;
+        font-size: 1.2em;
+        text-transform: uppercase;
+      }
+
+      .content-container {
+        border: 1px solid $border-box-color;
+        border-top-color: transparent;
+
+        .content {
+          text-align: center;
+          padding: 10px 15px 20px;
+
+          h5 {
+            color: $text-color;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 1px;
+          }
+
+          .stars {
+            a {
+              text-decoration: none;
+              color: $text-color;
+              @extend .far;
+              @extend .fa-star;
+
+              &.full {
+                @extend .fas;
+              }
+            }
+          }
+        }
+
+        .line {
+          margin: 0 10px;
+          border-bottom: 1px solid $text-color;
+          position: relative;
+          top: -5px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            width: 30px;
+            border-bottom: 4px solid $primary;
+            transform: translateX(-50%);
+          }
+        }
+
+        .actions {
+          padding: 15px 10px 10px 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .old-price {
+            display: none;
+            justify-content: center;
+            text-align: center;
+            text-decoration: line-through;
+            text-decoration-color: $text-color;
+            font-size: 14px;
+            color: $old-price-color;
+            transform: translateX(40px);
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+
+            &.show-price {
+              display: flex;
+            }
+          }
+        }
+      }
+
+      .carousel-hot-deals {
+        border: 1px solid $carousel-hot-deal-border-color;
+
+        .carousel-cell {
+          width: 100%;
+          text-align: center;
+
+          .hot-deals-images {
+            padding: 15px;
+            height: 280px;
+            width: 280px;
+          }
+        }
+
+        .flickity-page-dots {
+          display: inline;
+          position: absolute;
+          right: 10px;
+          top: -35px;
+          text-align: right;
+
+          .dot {
+            background-color: $bright-font;
+            opacity: 1;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 6px;
+            padding: 5px;
+            align-items: baseline;
+
+            &:hover {
+              background-color: $primary;
+            }
+          }
+
+          .is-selected {
+            background-color: $primary;
+          }
+        }
+
+        .flickity-prev-next-button {
+          display: none;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        .content {
+          h5 {
+            color: $primary;
+          }
+        }
+
+        .cart-btn {
+          display: inherit;
+        }
+
+        .counter {
+          visibility: visible;
+        }
+      }
     }
   }
 
   .right-side {
-    height: 100%;
+    height: 478px;
+
     .carousel {
-      position: relative;
-      .flickity-viewport {
+      height: 438px;
+
+      .carousel-cell {
         height: 100%;
+
         .featured-images {
           max-width: 100%;
+          height: 100%;
+
           @include media-breakpoint-down(md) {
             width: 100%;
             height: auto;
@@ -152,7 +243,7 @@
         background-color: $footer-claim-bg;
 
         &:hover {
-          background-color: $primary;
+          @extend %bg-hover-animation;
         }
       }
 
@@ -170,7 +261,7 @@
     }
 
     .overlay {
-      top: 20%;
+      top: 30%;
       width: 96%;
       height: 40%;
       position: absolute;
@@ -184,13 +275,29 @@
         display: flex;
         justify-content: center;
 
+        p {
+          color: $bright-font;
+          display: inline;
+          font-size: 2.5em;
+          font-family: "Poppins", sans-serif;
+          margin: 0;
+        }
+
+        .caption {
+          font-size: 1.2em;
+          margin-bottom: 10px;
+        }
+
         button {
+          transition: $hover-transition-timing;
           background-color: $bright-font;
           border: none;
           border-radius: 3px;
-          padding: 15px 20px;
+          padding: 15px 25px;
           text-transform: uppercase;
-          font-size: 12px;
+          font-size: 14px;
+          transform: translateY(20px);
+          cursor: pointer;
 
           &:hover {
             background-color: $primary;
