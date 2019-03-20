@@ -19,9 +19,9 @@
     }
 
     .product-box {
-      background-color: #ffffff;
+      background-color: $product-bg;
       border: 1px solid #e1e1e1;
-      margin-bottom: 2rem;
+      margin-bottom: 2rem;v
 
       .photo {
         position: relative;
@@ -159,6 +159,84 @@
         &.no-hover {
           background-color: $primary;
         }
+      }
+    }
+  }
+}
+.flickity-viewport {
+  width: 100%;
+  min-height: 400px;
+  margin-bottom: 2rem;
+}
+
+.flickity-page-dots {
+  z-index: 3;
+  right: 0;
+  top: -40px;
+  background: white;
+  width: auto;
+  height: 20px;
+  padding: 0 10px;
+  .dot {
+    width: 13px;
+    height: 13px;
+    margin: 0 6px;
+    opacity: 1;
+    background: #e2e2e2;
+    &:hover,
+    &.is-selected {
+      background: $primary;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  // Dodalem dodatkowy styl dla mniejszych rozdzielczosci zeby kropki nie zakrywaly menu kotre jest nad nimi
+  .flickity-viewport {
+    margin-top: 20px;
+  }
+  .flickity-page-dots {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 567px) and (orientation: portrait) {
+  .section--products {
+    .col-sm-12 {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 568px) and (max-width: 767px) and (orientation: landscape) {
+  .section--products {
+    .row {
+      justify-content: center;
+      .col-sm-12 {
+        max-width: 50%;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 995px) and (orientation: portrait) {
+  .section--products {
+    .col-md-6 {
+      max-width: 50%;
+    }
+  }
+}
+
+@media (min-width: 996px) and (max-width: 1024px) and (orientation: landscape) {
+  .section--products {
+    .row {
+      justify-content: center;
+      .col-md-6 {
+        max-width: 33.33%;
+        margin: 15px;
+        padding: 0;
       }
     }
   }

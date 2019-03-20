@@ -126,11 +126,13 @@ header {
   .menu {
     display: flex;
     align-self: stretch;
+    max-height: 85px;
 
     ul {
       margin: 0;
       padding: 0;
       display: flex;
+      max-height: 100%;
 
       li {
         list-style: none;
@@ -170,6 +172,7 @@ header {
       display: none;
     }
   }
+
   .search-form {
     border: 1px solid $form-border-color;
     display: inline-flex;
@@ -218,7 +221,6 @@ header {
         padding-left: 10px;
         font-size: 14px;
         outline: none;
-
         &::placeholder {
           color: $text-color;
         }
@@ -280,14 +282,14 @@ header {
       }
     }
   }
+  &.show {
+    display: block;
+    position: relative;
+    top: 10px;
+    margin-top: 10px;
+  }
 }
 
-.show {
-  display: block;
-  position: relative;
-  top: 10px;
-  margin-top: 10px;
-}
 @media screen and (min-width: 320px) and (max-width: 767px) {
   header {
     .top-bar {
@@ -484,7 +486,6 @@ header {
 
         p {
           font-size: 14px;
-
           i {
             font-size: 25px;
           }
@@ -499,6 +500,73 @@ header {
         right: 0;
         padding-right: 0;
         width: 50%;
+      }
+      nav {
+        text-align: center;
+        font-size: 1rem;
+        z-index: 1;
+        .topmenu {
+          text-align: center;
+          background: $white;
+          list-style: none;
+          position: relative;
+          display: inline-table;
+          margin: 0;
+          padding: 0;
+          li {
+            min-width: 240px;
+            a {
+              display: block;
+              padding: 0px 20px;
+              text-decoration: none;
+              line-height: 43px;
+              color: $form-border-color;
+              &:hover > i:first-child {
+                color: white;
+              }
+            }
+            &:hover > .submenu,
+            nav .topmenu li:hover > .topmenu li a {
+              display: block;
+              color: $form-border-color;
+            }
+            &:hover > a {
+              background: $primary;
+              color: white;
+              i:first-child {
+                color: white;
+              }
+            }
+          }
+          .submenu {
+            display: none;
+            margin: 0;
+            border: 1px solid $form-border-color;
+            list-style: none;
+            background: white;
+            border-radius: 0px;
+            padding: 0;
+            position: absolute;
+            top: 100%;
+            left: -1px;
+            li {
+              float: none;
+              min-width: 240px;
+              position: relative;
+            }
+            .submenu {
+              position: absolute;
+              left: 100%;
+              top: 0;
+            }
+          }
+          &:after {
+            content: "";
+            clear: both;
+            display: block;
+            color: white;
+          }
+        }
       }
     }
   }
