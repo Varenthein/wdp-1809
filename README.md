@@ -48,7 +48,7 @@ Kolejne sekcje strony są w oddzielnych modułach (folder partials).
 
 Przy dodaniu kolejnej sekcji do strony dbamy o kolejność liczbową sekcji:
 
-- jeśli sekcja , którą chcemy dodać jest pomiędzy partialami 20 i 30 (zajrzyj do folderu `partials`), nasza sekcja powinna mieć numer 25.
+- jeśli sekcja którą chcemy dodać jest pomiędzy partialami 20 i 30 (zajrzyj do folderu `partials`), nasza sekcja powinna mieć numer 25.
 
 Style dla poszczególnych sekcji zostały rozbite na oddzielne pliki scss.
 
@@ -69,6 +69,8 @@ Dla każdego taska tworzymy nowy branch
 - wyjątek może stanowić sytuacja kiedy bierzemy pod siebie taski dotyczące jednej sekcji (zadania z zakresu HTML, CSS, JS), wtedy wszystkie taski robimy na jednym branchu.
 
 Branch ma mieć taką samą nazwę jak task, który sobie przydzieliliśmy.
+
+Dla elementów powtarzających się tworzymy klasę globalną i do niej dodajemy style. Wszelkie różnice takie jak kolr czcionki, tło dodajemy klasę dodatkową.
 
 ## Rozwiązywanie problemów
 
