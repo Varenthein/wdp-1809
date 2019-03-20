@@ -215,7 +215,6 @@ $carousel-controls-color: #fff;
             }
           }
 
-          // flickity
           .carousel-section {
             position: absolute;
             width: 100%;
@@ -229,6 +228,8 @@ $carousel-controls-color: #fff;
               max-width: 100%;
               height: 66px;
               padding: 0 40px;
+              transition: all 0.3s ease;
+              padding-bottom: 5px;
 
               .carousel-cell {
                 @extend %center-flex-display;
@@ -390,6 +391,8 @@ $carousel-controls-color: #fff;
 
 .tooltip-inner {
   border-radius: 0;
+  position: relative;
+  top: -5px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -404,8 +407,12 @@ $carousel-controls-color: #fff;
     width: 100%;
     margin: 0 auto;
 
-    .carousel-cell {
-      width: 35.33%;
+    .flickity-viewport {
+      margin: 0;
+
+      .carousel-cell {
+        width: 35.33%;
+      }
     }
   }
 
@@ -442,8 +449,12 @@ $carousel-controls-color: #fff;
     width: 100%;
     margin: 0 auto;
 
-    .carousel-cell {
-      width: 33.33%;
+    .flickity-viewport {
+      margin: 0;
+
+      .carousel-cell {
+        width: 33.33%;
+      }
     }
   }
 }
