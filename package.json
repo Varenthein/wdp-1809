@@ -9,13 +9,12 @@
     "prebuild": "npm run clean",
     "build": "parcel build src/index.html",
     "clean": "rimraf dist",
-    "code-quality": "npm run format && npm run lint",
-    "format": "prettier --write \"src/**/*.{js,html,scss}\"",
-    "lint": "eslint src/"
+    "code-quality": "npm run format",
+    "format": "prettier --write \"src/**/*.{js,html,scss}\""
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && lint-staged"
+      "pre-commit": "pretty-quick --staged"
     }
   },
   "lint-staged": {
