@@ -1,4 +1,4 @@
-function buttonsOutlineClickCallback (event) {
+function buttonsOutlineClickCallback(event) {
   event.currentTarget.classList.toggle('btn-outline-active');
 }
 var buttonsOutline = document.querySelectorAll('.btn-outline');
