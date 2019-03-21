@@ -332,6 +332,9 @@ header {
     margin-left: 10px;
     display: inline-block;
     position: static;
+    z-index: 9999;
+    display: none;
+
     @include media-breakpoint-up(md) {
       display: none;
     }

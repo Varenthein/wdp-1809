@@ -210,6 +210,11 @@ $carousel-hot-deal-border-color: #f4f5f7;
   .right-side {
     height: 478px;
 
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+      height: 378px;
+    }
+
     .carousel {
       height: calc(100% - 40px);
 
@@ -221,8 +226,7 @@ $carousel-hot-deal-border-color: #f4f5f7;
           height: 100%;
 
           @include media-breakpoint-down(md) {
-            width: 100%;
-            height: auto;
+            height: 100%;
           }
         }
       }
@@ -240,6 +244,10 @@ $carousel-hot-deal-border-color: #f4f5f7;
         border: none;
         outline: none;
         background-color: $footer-claim-bg;
+
+        @include media-breakpoint-down(sm) {
+          height: 25px;
+        }
 
         &:hover {
           @extend %bg-hover-animation;
@@ -260,13 +268,22 @@ $carousel-hot-deal-border-color: #f4f5f7;
     }
 
     .overlay {
-      max-width: 100%;
-      top: 30%;
-      width: 96%;
-      height: 40%;
+      padding: 0 15px;
       position: absolute;
+      width: calc(100% - 30px);
+      top: 30%;
+      height: 40%;
       background-color: rgba(0, 0, 0, 0.4);
       display: block;
+
+      @include media-breakpoint-down(sm) {
+        width: 100vw !important;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: calc(100% - 30px);
+        padding: 0;
+      }
 
       .content {
         position: relative;
@@ -280,11 +297,27 @@ $carousel-hot-deal-border-color: #f4f5f7;
           display: inline;
           font-size: 2.5em;
           margin: 0;
+
+          @include media-breakpoint-down(sm) {
+            font-size: 1.5em;
+          }
+
+          @include media-breakpoint-down(md) {
+            font-size: 1.5em;
+          }
         }
 
         .caption {
           font-size: 1.2em;
           margin-bottom: 10px;
+
+          @include media-breakpoint-down(sm) {
+            font-size: 0.8em;
+          }
+
+          @include media-breakpoint-down(md) {
+            font-size: 0.8em;
+          }
         }
 
         button {
@@ -295,8 +328,20 @@ $carousel-hot-deal-border-color: #f4f5f7;
           padding: 15px 25px;
           text-transform: uppercase;
           font-size: 14px;
-          transform: translateY(20px);
+          transform: translateY(10px);
           cursor: pointer;
+
+          @include media-breakpoint-down(sm) {
+            font-size: 10px;
+            padding: 10px 20px;
+            transform: translateY(30px);
+          }
+
+          @include media-breakpoint-down(md) {
+            font-size: 10px;
+            padding: 10px 20px;
+            transform: translateY(30px);
+          }
 
           &:hover {
             background-color: $primary;
@@ -310,6 +355,18 @@ $carousel-hot-deal-border-color: #f4f5f7;
         width: 0;
         height: 0;
         overflow: hidden;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .section-featured {
+    height: auto;
+
+    .right-side {
+      .overlay {
+        width: 100% !important;
       }
     }
   }
