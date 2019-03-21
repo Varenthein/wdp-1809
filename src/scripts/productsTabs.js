@@ -2,11 +2,11 @@ const furnitureCategoryTabs = document.querySelectorAll('.category-tab-select');
 const portMode = 'portrait';
 const landMode = 'landscape';
 
-furnitureCategoryTabs.forEach(function (tab) {
+furnitureCategoryTabs.forEach(function(tab) {
   tab.addEventListener('click', checkResolutionOfScreen);
 });
 
-function checkResolutionOfScreen (event) {
+function checkResolutionOfScreen(event) {
   const targetTab = event.currentTarget.getAttribute('href');
   const tabPanel = document.querySelector(targetTab);
   const tabPanelProductElements = tabPanel.children[0].children.length;
@@ -23,7 +23,7 @@ function checkResolutionOfScreen (event) {
   detectScreenMode(orientation, width, tabPanelProductElements);
 }
 
-function detectScreenMode (orientation, width, tabPanelProductElements) {
+function detectScreenMode(orientation, width, tabPanelProductElements) {
   const landscapeLargeMode = orientation === landMode && width > 1024;
   const landscapeMiddleMode = orientation === landMode && (width > 995 && width < 1024);
   const landscapeSmallMode = orientation === landMode && (width > 568 && width < 768);
@@ -43,7 +43,7 @@ function detectScreenMode (orientation, width, tabPanelProductElements) {
   }
 }
 
-function createDots (number) {
+function createDots(number) {
   var dotMenu = document.querySelector('#dots-container');
   dotMenu.innerHTML = '';
 
