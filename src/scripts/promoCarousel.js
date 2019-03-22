@@ -1,8 +1,8 @@
 'use strict';
-const promoCarauselRightElemenet = document.getElementById('promoCarouselRight');
+const promoCarauselRightElement = document.getElementById('promoCarouselRight');
 const promoCarouselLeftElement = document.getElementById('promoCarouselLeft');
 
-const promoCarauselRight = new Flickity(promoCarauselRightElemenet, {
+const promoCarauselRight = new Flickity(promoCarauselRightElement, {
   autoPlay: true,
   contain: true,
   draggable: true,
@@ -15,12 +15,3 @@ const promoCarouselLeft = new Flickity(promoCarouselLeftElement, {
   draggable: true,
   cellAlign: 'left'
 });
-
-function promoCarouselsResize() {
-  setInterval(function() {
-    promoCarauselRight.resize();
-    promoCarouselLeft.resize();
-  }, 300);
-}
-
-window.addEventListener('resize', promoCarouselsResize);
