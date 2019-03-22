@@ -1,8 +1,8 @@
 'use strict';
-const promoCarauselRightElement = document.getElementById('promoCarouselRight');
+const promoCarouselRightElement = document.getElementById('promoCarouselRight');
 const promoCarouselLeftElement = document.getElementById('promoCarouselLeft');
 
-const promoCarauselRight = new Flickity(promoCarauselRightElement, {
+const promoCarouselRight = new Flickity(promoCarouselRightElement, {
   autoPlay: true,
   contain: true,
   draggable: true,
