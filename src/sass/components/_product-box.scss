@@ -1,6 +1,7 @@
 $flkty-bg-color: #fff;
 
 .panel-bar {
+  margin-top: 50px;
   .row {
     .menu {
       .menu-tab-list {
@@ -24,7 +25,7 @@ $flkty-bg-color: #fff;
       background-color: $product-bg;
       border: 1px solid #e1e1e1;
       margin-bottom: 2rem;
-      v .photo {
+      .photo {
         position: relative;
         padding: 80% 10px 0 10px;
 
@@ -163,6 +164,7 @@ $flkty-bg-color: #fff;
       }
     }
   }
+
   .flickity-viewport {
     width: 100%;
     min-height: 400px;
@@ -193,12 +195,14 @@ $flkty-bg-color: #fff;
 
 @media (max-width: 767px) {
   // Dodalem dodatkowy styl dla mniejszych rozdzielczosci zeby kropki nie zakrywaly menu kotre jest nad nimi
-  .flickity-viewport {
-    margin-top: 20px;
-  }
-  .flickity-page-dots {
-    width: 100%;
-    margin-top: 25px;
+  .product-box {
+    .flickity-viewport {
+      margin-top: 20px;
+    }
+    .flickity-page-dots {
+      width: 100%;
+      margin-top: 25px;
+    }
   }
 }
 
