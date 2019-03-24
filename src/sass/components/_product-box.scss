@@ -128,7 +128,6 @@ $flkty-bg-color: #fff;
         }
        }
       }
-     }    
 
       .line {
         margin: 0 10px;
@@ -182,6 +181,7 @@ $flkty-bg-color: #fff;
       }
     }
   }
+    
   .flickity-viewport {
     width: 100%;
     min-height: 400px;
@@ -208,6 +208,7 @@ $flkty-bg-color: #fff;
       }
     }
   }
+}
 }
 
 @media (max-width: 767px) {
