@@ -163,6 +163,7 @@ $flkty-bg-color: #fff;
       }
     }
   }
+
   .flickity-viewport {
     width: 100%;
     min-height: 400px;
@@ -193,12 +194,14 @@ $flkty-bg-color: #fff;
 
 @media (max-width: 767px) {
   // Dodalem dodatkowy styl dla mniejszych rozdzielczosci zeby kropki nie zakrywaly menu kotre jest nad nimi
-  .flickity-viewport {
-    margin-top: 20px;
-  }
-  .flickity-page-dots {
-    width: 100%;
-    margin-top: 25px;
+  .product-box {
+    .flickity-viewport {
+      margin-top: 20px;
+    }
+    .flickity-page-dots {
+      width: 100%;
+      margin-top: 25px;
+    }
   }
 }
 
