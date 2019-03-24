@@ -1,5 +1,5 @@
 @import "variables";
-
+@import "placeholders";
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
 @import "bootstrap/bootstrap.scss";
@@ -13,11 +13,19 @@
 
 @import "components/button";
 @import "components/feature-box";
+@import "components/featured";
 @import "components/panel-bar";
 @import "components/post-box";
 @import "components/product-box";
 
+@import "components/brands.scss";
+
+@import "components/gallery-box";
+
+@import "components/promotions";
+
 @import "components/section--features";
+@import "components/feedback";
 
 body {
   font-family: "Poppins", sans-serif;

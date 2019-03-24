@@ -1,50 +1,104 @@
-.product-box {
-  background-color: #ffffff;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 2rem;
+$flkty-bg-color: #fff;
 
-  .photo {
-    position: relative;
-    padding: 80% 10px 0 10px;
-    background: {
-      color: #f4f5f7;
-      size: contain;
-      position: center;
-      repeat: no-repeat;
-    }
-    overflow: hidden;
-    align-items: flex-end;
-
-    .sale {
-      position: absolute;
-      top: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #292929;
-      border-radius: 50%;
-      color: #ffffff;
-      padding: 30px 15px 5px 15px;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: space-between;
+.panel-bar {
+  .row {
+    .menu {
+      .menu-tab-list {
+        display: block;
+      }
     }
   }
+}
 
-  .content {
-    text-align: center;
-    padding: 20px;
+.tab-content {
+  width: 100%;
+  height: auto;
 
-    h5 {
-      color: $primary;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 1px;
+  .tab-pane {
+    .row {
+      flex-wrap: nowrap;
+      overflow-y: hidden;
     }
 
-    .stars {
-      direction: rtl;
+    .product-box {
+      background-color: $product-bg;
+      border: 1px solid #e1e1e1;
+      margin-bottom: 2rem;
+      v .photo {
+        position: relative;
+        padding: 80% 10px 0 10px;
+
+        background: {
+          size: cover;
+          position: center;
+          repeat: no-repeat;
+        }
+
+        &.bed-photo {
+          background-image: url("../images/beds/bed-1358198_640-min.png");
+        }
+
+        &.second-bed-photo {
+          background-image: url("../images/beds/bed-1839184_640-min.png");
+        }
+
+        &.third-bed-photo {
+          background-image: url("../images/beds/hotel-3102375_640-min.png");
+        }
+
+        &.fourth-bed-photo {
+          background-image: url("../images/beds/pexels-photo-1034584.png");
+        }
+
+        &.bedroom {
+          background-image: url("../images/beds/furniture-2387636_640-min.png");
+        }
+
+        &.second-bedroom {
+          background-image: url("../images/beds/bedroom-3498911_640-min.png");
+        }
+
+        &.third-bedroom {
+          background-image: url("../images/beds/bedroom-413706_640-min.png");
+        }
+
+        &.fourth-bedroom {
+          background-image: url("../images/beds/bedroom-665811_640-min.png");
+        }
+
+        overflow: hidden;
+        align-items: flex-end;
+
+        .sale {
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #292929;
+          border-radius: 50%;
+          color: #ffffff;
+          padding: 30px 15px 5px 15px;
+        }
+
+        .buttons {
+          display: flex;
+          visibility: hidden;
+        }
+      }
+
+      .content {
+        text-align: center;
+        padding: 20px;
+
+        h5 {
+          color: $primary;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 1px;
+        }
+
+      .stars {
+        direction: rtl;
 
       a {
         text-decoration: none;
@@ -72,30 +126,137 @@
           @extend .fas;
           color: $primary;
         }
+       }
+      }
+
+      .line {
+        margin: 0 10px;
+        border-bottom: 1px solid #2a2a2a;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -1px;
+          left: 50%;
+          width: 30px;
+          border-bottom: 4px solid $primary;
+          transform: translateX(-50%);
+        }
+      }
+
+      .actions {
+        padding: 15px 10px 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .old-price {
+          display: none;
+          justify-content: center;
+          text-align: center;
+          text-decoration: line-through;
+          font-size: 14px;
+          color: $old-price-color;
+          margin-left: 30px;
+          font-family: "Poppins", sans-serif;
+          font-weight: 300;
+
+          &.show-price {
+            display: flex;
+          }
+        }
+      }
+
+      &:hover {
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+          visibility: visible;
+        }
+
+        &.no-hover {
+          background-color: $primary;
+        }
       }
     }
   }
-
-  .line {
-    margin: 0 10px;
-    border-bottom: 1px solid #2a2a2a;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -1px;
-      left: 50%;
-      width: 30px;
-      border-bottom: 4px solid $primary;
-      transform: translateX(-50%);
-    }
+  .flickity-viewport {
+    width: 100%;
+    min-height: 400px;
+    margin-bottom: 2rem;
   }
 
-  .actions {
-    padding: 15px 10px 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .flickity-page-dots {
+    z-index: 3;
+    right: 0;
+    top: -40px;
+    background: $flkty-bg-color;
+    width: auto;
+    height: 20px;
+    padding: 0 10px;
+    .dot {
+      width: 13px;
+      height: 13px;
+      margin: 0 6px;
+      opacity: 1;
+      background: #e2e2e2;
+      &:hover,
+      &.is-selected {
+        background: $primary;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  // Dodalem dodatkowy styl dla mniejszych rozdzielczosci zeby kropki nie zakrywaly menu kotre jest nad nimi
+  .flickity-viewport {
+    margin-top: 20px;
+  }
+  .flickity-page-dots {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 567px) and (orientation: portrait) {
+  .section--products {
+    .col-sm-12 {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 568px) and (max-width: 767px) and (orientation: landscape) {
+  .section--products {
+    .row {
+      justify-content: center;
+      .col-sm-12 {
+        max-width: 50%;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 995px) and (orientation: portrait) {
+  .section--products {
+    .col-md-6 {
+      max-width: 50%;
+    }
+  }
+}
+
+@media (min-width: 996px) and (max-width: 1024px) and (orientation: landscape) {
+  .section--products {
+    .row {
+      justify-content: center;
+      .col-md-6 {
+        max-width: 33.33%;
+        margin: 15px;
+        padding: 0;
+      }
+    }
   }
 }
