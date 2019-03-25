@@ -25,6 +25,7 @@ $flkty-bg-color: #fff;
       background-color: $product-bg;
       border: 1px solid #e1e1e1;
       margin-bottom: 2rem;
+
       .photo {
         position: relative;
         padding: 80% 10px 0 10px;
@@ -237,6 +238,7 @@ $flkty-bg-color: #fff;
   .section--products {
     .row {
       justify-content: center;
+
       .col-sm-12 {
         max-width: 50%;
         padding: 5px;
@@ -257,6 +259,7 @@ $flkty-bg-color: #fff;
   .section--products {
     .row {
       justify-content: center;
+
       .col-md-6 {
         max-width: 33.33%;
         margin: 15px;

@@ -1,4 +1,6 @@
-.container {
+.feedback-container {
+  width: 100%;
+  height: 100%;
   position: relative;
 
   .row {
@@ -115,7 +117,7 @@
 }
 
 @media (max-width: 767px) {
-  .container {
+  .feedback-container {
     .row {
       &.overwritten {
         max-width: 85%;
@@ -124,6 +126,7 @@
 
     .flickity-page-dots {
       right: -33px;
+      margin: 0;
     }
   }
 }
