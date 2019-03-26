@@ -100,14 +100,33 @@ $flkty-bg-color: #fff;
         }
 
         .stars {
+          direction: rtl;
+
           a {
             text-decoration: none;
             color: rgb(42, 42, 42);
+            transition: 0.3s all;
             @extend .far;
             @extend .fa-star;
-
-            &.full {
+            &.voted {
               @extend .fas;
+              color: rgb(42, 42, 42);
+            }
+
+            &:hover,
+            &:hover ~ a::before {
+              @extend .fas;
+              color: $primary;
+            }
+            &.full,
+            .full ~ a::before {
+              @extend .fas;
+              color: $primary;
+            }
+            &.full2,
+            .full2 ~ a::before {
+              @extend .fas;
+              color: $primary;
             }
           }
         }
@@ -164,33 +183,32 @@ $flkty-bg-color: #fff;
         }
       }
     }
-  }
 
-  .flickity-viewport {
-    width: 100%;
-    min-height: 400px;
-    margin-bottom: 2rem;
-  }
+    .flickity-viewport {
+      width: 100%;
+      min-height: 400px;
+      margin-bottom: 2rem;
+    }
 
-  .flickity-page-dots {
-    z-index: 3;
-    right: 0;
-    top: -40px;
-    background: $flkty-bg-color;
-    width: auto;
-    height: 20px;
-    padding: 0 10px;
 
-    .dot {
-      width: 13px;
-      height: 13px;
-      margin: 0 6px;
-      opacity: 1;
-      background: #e2e2e2;
-
-      &:hover,
-      &.is-selected {
-        background: $primary;
+    .flickity-page-dots {
+      z-index: 3;
+      right: 0;
+      top: -40px;
+      background: $flkty-bg-color;
+      width: auto;
+      height: 20px;
+      padding: 0 10px;
+      .dot {
+        width: 13px;
+        height: 13px;
+        margin: 0 6px;
+        opacity: 1;
+        background: #e2e2e2;
+        &:hover,
+        &.is-selected {
+          background: $primary;
+        }
       }
     }
   }
